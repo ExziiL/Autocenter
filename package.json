@@ -1,0 +1,35 @@
+{
+  "name": "thomas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss assets/styles/styles.css -o dist/dist_styles/dist_styles.css",
+    "serve": "cross-env NODE_ENV=development concurrently \"postcss public/assets/styles/styles.css -o public/build/build_styles/build_styles.css --watch\"  \"live-server ./public\"",
+    "start": "npm run serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.8.5",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.5.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "live-server": "^1.2.1",
+    "prettier": "^2.0.5",
+    "vue": "^2.6.11"
+  }
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1"
+    />
+    <title>Autocenter Lichtenfels</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../build_styles/build_styles.css"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="../build_scripts/build_script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- * NAVIGATION BAR-->
+    <header
+      id="test"
+      class="md:flex md:justify-between bg-gray-400 md:py-2 md:px-4"
+    >
+      <div class="flex items-center justify-between py-2 px-4 md:p-0">
+        <a href="../../index.html">
+          <img
+            src="/img/image.svg"
+            alt="Autocenter Lichtenfels Logo"
+            class="h-8 pr-4"
+          />
+        </a>
+
+        <div class="block md:hidden">
+          <button
+            @click="isOpen = !isOpen"
+            class="flex items-center px-3 py-2 border rounded text-gray-800 border-gray-800 hover:text-white hover:border-gray-200 focus:outline-none"
+          >
+            <svg
+              class="fill-current h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path
+                v-if="!isOpen"
+                d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+              ></path>
+              <path
+                v-if="isOpen"
+                d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+                stroke="#000"
+                stroke-width="1"
+                fill="fill-current"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div
+        :class="isOpen ? 'block' : 'hidden'"
+        class="px-2 pt-2 pb-4 md:flex md:p-0 text-gray-900"
+      >
+        <a
+          href="../../index.html"
+          class="block px-2 py-1 mt-1 font-semibold hover:bg-indigo-400 rounded ml-1"
+          >Startseite</a
+        >
+        <!-- <a
+          href="#"
+          class="mt-1 block px-2 py-1 font-semibold hover:bg-indigo-400 rounded ml-1"
+          >Service</a
+        > -->
+        <a
+          href="routenplaner.html"
+          class="mt-1 block px-2 py-1 font-semibold hover:bg-indigo-400 rounded ml-1"
+          >Routenplaner</a
+        >
+        <a
+          href="#"
+          class="mt-1 block px-2 py-1 font-semibold hover:bg-indigo-400 rounded ml-1"
+          >Kontakt</a
+        >
+      </div>
+    </header>
+
+    <!-- * MAIN CONTAINER -->
+    <div class="container mx-auto px-6 md:px-10 lg:px-16">
+      <!-- * CONTACT INFO -->
+      <div>
+        <div class="min-h-screen mb-20 sm:mb-16 flex flex-col items-start">
+          <div class="w-3/4 md:w-1/2 mt-24 font-serif font-hairline">
+            <h1 class="text-4xl md:text-5xl text-indigo-700">Kontakt</h1>
+          </div>
+          <!-- * CTA -->
+          <div class="container w-3/4 sm:w-7/12 lg:w-5/12 mt-10 self-start">
+            <div
+              class="flex flex-col sm:flex-row items-start sm:items-center rounded-md p-4"
+              style="
+                box-shadow: rgba(50, 50, 93, 0.1) 0px 15px 35px,
+                  rgba(0, 0, 0, 0.07) 0px 5px 15px;
+              "
+            >
+              <div class="flex-1 leading-tight">
+                <p class="text-gray-900 text-md mb-3">
+                  <strong>Telefon: </strong>
+                  09571 - 755 130
+                </p>
+                <p class="text-sm text-gray-700">
+                  <strong>E Mail: </strong>
+                  info@autocenter-lichtenfels.de
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full">
+            <h3 class="mt-10 pt-4 text-2xl">Öffnungszeigen</h3>
+            <table class="w-full md:w-3/4 text-left border-collapse">
+              <tbody>
+                <tr class="border-t h-10">
+                  <td class="font-semibold">Monat</td>
+                  <td>8:00 - 17:00</td>
+                </tr>
+                <tr class="border-t h-10">
+                  <td class="font-semibold">Dienstag</td>
+                  <td>8:00 - 17:00</td>
+                </tr>
+                <tr class="border-t h-10">
+                  <td class="font-semibold">Mittwoch</td>
+                  <td>8:00 - 17:00</td>
+                </tr>
+                <tr class="border-t h-10">
+                  <td class="font-semibold">Donnerstag</td>
+                  <td>8:00 - 17:00</td>
+                </tr>
+                <tr class="border-t h-10">
+                  <td class="font-semibold">Freitag</td>
+                  <td>8:00 - 17:00</td>
+                </tr>
+                <tr class="border-t h-10">
+                  <td class="font-semibold">Samstag</td>
+                  <td>08:00 - 12:00</td>
+                </tr>
+                <tr class="border-t h-10">
+                  <td class="font-semibold">Sonntag</td>
+                  <td>Geschlossen</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- * FOOTER -->
+    <footer class="text-white">
+      <div class="flex justify-between items-center p-4 bg-gray-700">
+        <div class="flex-initial text-xl font-semibold">
+          Autocenter Lichtenfels
+        </div>
+        <div>
+          <ul class="flex flex-col sm:flex-row text-sm -mx-3 font-medium">
+            <li class="mx-3">
+              <a href="../../index.html" class="hover:underline">Startseite</a>
+            </li>
+            <li class="mx-3">
+              <a href="#" class="hover:underline">Kontakt</a>
+            </li>
+            <li class="mx-3">©2020 Autocenter Lichtenfels</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="w-full px-4 py-2 text-xs font-light bg-black flex flex-col sm:flex-row justify-between items-start md:items-center"
+      >
+        <div>
+          <strong class="font-bold">Tel.: </strong>
+          09571 - 755 130
+          <strong class="ml-3 font-bold">E Mail: </strong>
+          <a href="#" class="hover:underline">
+            info@autocenter-lichtenfels.de
+          </a>
+        </div>
+        <div>
+          <a href="http://127.0.0.1:8080/" class="hover:underline">
+            www.autocenter-lichtenfels.de
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

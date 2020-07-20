@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1"
+    />
+    <title>Autocenter Lichtenfels</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../build_styles/build_styles.css"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="../build_scripts/build_script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- * NAVIGATION BAR-->
+    <header
+      id="test"
+      class="md:flex md:justify-between bg-indigo-500 md:py-2 md:px-4"
+    >
+      <div class="flex items-center justify-between py-2 px-4 md:p-0">
+        <a href="../../index.html">
+          <img
+            src="/img/image.svg"
+            alt="Autocenter Lichtenfels Logo"
+            class="h-8 pr-4"
+          />
+        </a>
+
+        <div class="block md:hidden">
+          <button
+            @click="isOpen = !isOpen"
+            class="flex items-center px-3 py-2 border rounded text-indigo-200 border-indigo-400 hover:text-white hover:border-white focus:outline-none"
+          >
+            <svg
+              class="fill-current h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path
+                v-if="!isOpen"
+                d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+              ></path>
+              <path
+                v-if="isOpen"
+                d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+                stroke="#fff"
+                stroke-width="1"
+                fill="none"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div
+        :class="isOpen ? 'block' : 'hidden'"
+        class="px-2 pt-2 pb-4 md:flex md:p-0"
+      >
+        <a
+          href="../../index.html"
+          class="block px-2 py-1 mt-1 text-white font-semibold hover:bg-indigo-400 rounded ml-1"
+          >Startseite</a
+        >
+        <!-- <a
+          href="#"
+          class="mt-1 block px-2 py-1 text-white font-semibold hover:bg-indigo-400 rounded ml-1"
+          >Service</a
+        > -->
+        <a
+          href="#"
+          class="mt-1 block px-2 py-1 text-white font-semibold hover:bg-indigo-400 rounded ml-1"
+          >Routenplaner</a
+        >
+        <a
+          href="contact.html"
+          class="mt-1 block px-2 py-1 text-white font-semibold hover:bg-indigo-400 rounded ml-1"
+          >Kontakt</a
+        >
+      </div>
+    </header>
+
+    <!-- * MAIN CONTAINER -->
+    <div class="container mx-auto px-6 md:px-10 lg:px-16 min-h-screen">
+      <!-- * CONTACT INFO -->
+      <div class="text-gray-700 body-font relative">
+        <div
+          class="container px-5 py-24 mx-auto flex sm:flex-no-wrap flex-wrap"
+        >
+          <div
+            class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              class="absolute inset-0"
+              frameborder="0"
+              title="map"
+              marginheight="0"
+              marginwidth="0"
+              scrolling="no"
+              src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+              style="filter: grayscale(1) contrast(1.2) opacity(0.4);"
+            ></iframe>
+            <div class="bg-white relative flex flex-wrap py-6">
+              <div class="lg:w-1/2 px-6">
+                <h2
+                  class="title-font font-medium text-gray-900 tracking-widest text-sm"
+                >
+                  ADDRESS
+                </h2>
+                <p class="leading-relaxed">
+                  Photo booth tattooed prism, portland taiyaki hoodie neutra
+                  typewriter
+                </p>
+              </div>
+              <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                <h2
+                  class="title-font font-medium text-gray-900 tracking-widest text-sm"
+                >
+                  EMAIL
+                </h2>
+                <a class="text-indigo-500 leading-relaxed">example@email.com</a>
+                <h2
+                  class="title-font font-medium text-gray-900 tracking-widest text-sm mt-4"
+                >
+                  PHONE
+                </h2>
+                <p class="leading-relaxed">123-456-7890</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full mt-8 sm:mt-0"
+          >
+            <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
+              Feedback
+            </h2>
+            <p class="leading-relaxed mb-5 text-gray-600">
+              Post-ironic portland shabby chic echo park, banjo fashion axe
+            </p>
+            <input
+              class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4"
+              placeholder="Name"
+              type="text"
+            />
+            <input
+              class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4"
+              placeholder="Email"
+              type="email"
+            />
+            <textarea
+              class="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-indigo-500 text-base px-4 py-2 mb-4 resize-none"
+              placeholder="Message"
+            ></textarea>
+            <button
+              class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            >
+              Button
+            </button>
+            <p class="text-xs text-gray-500 mt-3">
+              Chicharrones blog helvetica normcore iceland tousled brook viral
+              artisan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- * FOOTER -->
+    <footer class="text-white">
+      <div class="flex justify-between items-center p-4 bg-gray-700">
+        <div class="flex-initial text-xl font-semibold">
+          Autocenter Lichtenfels
+        </div>
+        <div>
+          <ul class="flex flex-col sm:flex-row text-sm -mx-3 font-medium">
+            <li class="mx-3">
+              <a href="../../index.html" class="hover:underline">Startseite</a>
+            </li>
+            <li class="mx-3">
+              <a href="contact.html" class="hover:underline">Kontakt</a>
+            </li>
+            <li class="mx-3">©2020 Autocenter Lichtenfels</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="w-full px-4 py-2 text-xs font-light bg-black flex flex-col sm:flex-row justify-between items-start md:items-center"
+      >
+        <div>
+          <strong class="font-bold">Tel.: </strong>
+          09571 - 755 130
+          <strong class="ml-3 font-bold">E Mail: </strong>
+          <a href="#" class="hover:underline">
+            info@autocenter-lichtenfels.de
+          </a>
+        </div>
+        <div>
+          <a href="http://127.0.0.1:8080/" class="hover:underline">
+            www.autocenter-lichtenfels.de
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
