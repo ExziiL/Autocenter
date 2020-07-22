@@ -13,4 +13,8 @@
   height: 60vh;
 }
 
+.bg-opacity-95 {
+  opacity: 95%;
+}
+
 @tailwind utilities;
