@@ -24,9 +24,9 @@
     <!-- * NAVIGATION BAR-->
     <header
       id="test"
-      class="md:flex md:justify-between bg-indigo-500 md:py-2 md:px-4"
+      class="bg-indigo-500 md:flex md:justify-between md:py-2 md:px-4"
     >
-      <div class="flex items-center justify-between py-2 px-4 md:p-0">
+      <div class="flex items-center justify-between px-4 py-2 md:p-0">
         <a href="../../index.html">
           <img
             src="/img/image.svg"
@@ -38,10 +38,10 @@
         <div class="block md:hidden">
           <button
             @click="isOpen = !isOpen"
-            class="flex items-center px-3 py-2 border rounded text-indigo-200 border-indigo-400 hover:text-white hover:border-white focus:outline-none"
+            class="flex items-center px-3 py-2 text-indigo-200 border border-indigo-400 rounded hover:text-white hover:border-white focus:outline-none"
           >
             <svg
-              class="fill-current h-3 w-3"
+              class="w-3 h-3 fill-current"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -68,34 +68,34 @@
       >
         <a
           href="../../index.html"
-          class="block px-2 py-1 mt-1 text-white font-semibold hover:bg-indigo-400 rounded ml-1"
+          class="block px-2 py-1 mt-1 ml-1 font-semibold text-white rounded hover:bg-indigo-400"
           >Startseite</a
         >
         <!-- <a
           href="#"
-          class="mt-1 block px-2 py-1 text-white font-semibold hover:bg-indigo-400 rounded ml-1"
+          class="block px-2 py-1 mt-1 ml-1 font-semibold text-white rounded hover:bg-indigo-400"
           >Service</a
         > -->
         <a
           href="#"
-          class="mt-1 block px-2 py-1 text-white font-semibold hover:bg-indigo-400 rounded ml-1"
+          class="block px-2 py-1 mt-1 ml-1 font-semibold text-white bg-indigo-600 rounded"
           >Routenplaner</a
         >
         <a
           href="contact.html"
-          class="mt-1 block px-2 py-1 text-white font-semibold hover:bg-indigo-400 rounded ml-1"
+          class="block px-2 py-1 mt-1 ml-1 font-semibold text-white rounded hover:bg-indigo-400"
           >Kontakt</a
         >
       </div>
     </header>
 
     <!-- * MAIN CONTAINER -->
-    <div class="container mx-auto px-2 md:px-10 lg:px-16 min-h-screen">
+    <div class="container min-h-screen px-2 mx-auto md:px-10 lg:px-16">
       <!-- * CONTACT INFO -->
-      <div class="text-gray-700 body-font relative">
+      <div class="relative text-gray-700 body-font">
         <div class="container px-5 py-24">
           <div
-            class="bg-gray-300 rounded-lg overflow-hidden px-6 pt-20 sm:pt-32 lg:pt-2 lg:px-2 flex items-start justify-end relative vh-90 sm:vh-60"
+            class="relative flex items-start justify-end px-6 pt-20 overflow-hidden bg-gray-300 rounded-lg sm:pt-32 lg:pt-2 lg:px-2 vh-90 sm:vh-60"
           >
             <iframe
               width="100%"
@@ -109,39 +109,47 @@
             ></iframe>
 
             <div
-              class="bg-white bg-opacity-95 relative flex flex-wrap py-2 sm:py-4 shadow-lg lg:w-2/4"
+              class="relative flex flex-wrap py-4 mt-12 bg-white shadow-lg bg-opacity-95 sm:mt-0 lg:w-2/4"
             >
-              <div class="lg:w-1/2 px-6 lg:pr-2">
+              <div class="px-6 lg:w-1/2 lg:pr-2">
                 <h2
-                  class="title-font font-medium text-gray-900 tracking-widest text-sm"
+                  class="text-sm font-medium tracking-widest text-gray-900 title-font"
                 >
                   Adresse
                 </h2>
-                <div class="leading-tight text-sm pb-2 sm:pb-0">
+                <div
+                  class="flex flex-col justify-between text-sm leading-tight sm:pb-0"
+                >
                   <p class="">Autocenter Lichtenfels</p>
                   <p class="">Kfz Ankauf und Verkauf</p>
                   <p class="">Bamberger Str. 77</p>
                   <p class="">96215 Lichtenfels</p>
                 </div>
               </div>
-              <div class="lg:w-1/2 px-6 lg:mt-1 lg:px-2">
-                <div class="leading-none lg:leading-tight pt-2">
+              <div class="flex flex-col justify-between px-6 lg:w-1/2 lg:px-2">
+                <div class="pt-2 leading-tight sm:pt-0">
                   <h2
-                    class="title-font font-medium text-gray-900 tracking-widest text-sm"
+                    class="text-sm font-medium tracking-widest text-gray-900 title-font"
                   >
                     E-Mail
                   </h2>
-                  <a class="text-indigo-500 leading-relaxed text-xs sm:text-sm"
-                    >info@autocenter-lichtenfels.de</a
+                  <p
+                    class="text-xs leading-none text-indigo-500 sm:text-sm hover:underline"
                   >
+                    <a href="">
+                      info@autocenter-lichtenfels.de
+                    </a>
+                  </p>
                 </div>
-                <div class="leading-none lg:leading-tight pt-2 sm:pt-0">
+                <div class="pt-2 leading-tight">
                   <h2
-                    class="title-font font-medium text-gray-900 tracking-widest text-sm"
+                    class="text-sm font-medium tracking-widest text-gray-900 title-font"
                   >
                     Tel.:
                   </h2>
-                  <p class="leading-relaxed text-sm">09571 - 755 130</p>
+                  <p class="text-xs sm:text-sm">
+                    09571 - 755 130
+                  </p>
                 </div>
               </div>
             </div>
@@ -152,37 +160,46 @@
 
     <!-- * FOOTER -->
     <footer class="text-white">
-      <div class="flex justify-between items-center p-4 bg-gray-700">
-        <div class="flex-initial text-xl font-semibold">
+      <div
+        class="flex items-center justify-between px-4 py-2 leading-relaxed bg-gray-700"
+      >
+        <div class="flex-initial font-semibold text-md">
           Autocenter Lichtenfels
         </div>
         <div>
-          <ul class="flex flex-col sm:flex-row text-sm -mx-3 font-medium">
+          <ul class="flex flex-col -mx-3 text-sm font-thin sm:flex-row">
             <li class="mx-3">
               <a href="../../index.html" class="hover:underline">Startseite</a>
             </li>
             <li class="mx-3">
+              <a href="" class="border-b border-gray-400 hover:underline"
+                >Routenplaner</a
+              >
+            </li>
+            <li class="mx-3">
               <a href="contact.html" class="hover:underline">Kontakt</a>
             </li>
-            <li class="mx-3">©2020 Autocenter Lichtenfels</li>
+            <li class="mx-3">
+              <a href="#" class="hover:underline">Sitemap</a>
+            </li>
           </ul>
         </div>
       </div>
 
       <div
-        class="w-full px-4 py-2 text-xs font-light bg-black flex flex-col sm:flex-row justify-between items-start md:items-center"
+        class="flex flex-col items-start justify-between w-full px-4 py-2 text-xs font-light bg-black sm:flex-row md:items-center"
       >
         <div>
           <strong class="font-bold">Tel.: </strong>
-          09571 - 755 130
-          <strong class="ml-3 font-bold">E Mail: </strong>
+          09571 - 755 130<br />
+          <strong class="font-bold">E-Mail: </strong>
           <a href="#" class="hover:underline">
             info@autocenter-lichtenfels.de
           </a>
         </div>
-        <div>
+        <div class="flex">
           <a href="http://127.0.0.1:8080/" class="hover:underline">
-            www.autocenter-lichtenfels.de
+            ©2020 Autocenter Lichtenfels
           </a>
         </div>
       </div>
