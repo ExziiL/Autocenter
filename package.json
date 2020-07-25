@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "postcss public/assets/styles/styles.css -o public/dist/dist_styles/dist_styles.css",
-    "serve": "cross-env NODE_ENV=development concurrently \"postcss public/assets/styles/styles.css -o public/build/build_styles/build_styles.css --watch\"  \"live-server ./public\"",
+    "serve": "cross-env NODE_ENV=development concurrently \"postcss public/assets/styles/styles.css -o public/build/build_styles/build_styles.css --watch\"  \"live-server \"",
     "start": "npm run serve"
   },
   "keywords": [],
