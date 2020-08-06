@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5, minimum-scale=1"
     />
+    <meta name="description" content="Kontaktformular" />
     <title>Autocenter Lichtenfels</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -20,8 +21,8 @@
     <script src="../build_scripts/build_script.js" defer></script>
   </head>
 
-  <body class="antialiased">
-    <div class="h-auto">
+  <body class="min-h-screen antialiased">
+    <div class="relative min-h-screen">
       <!-- * NAVIGATION BAR-->
       <header
         id="test"
@@ -91,14 +92,14 @@
       </header>
 
       <!-- * MAIN CONTAINER -->
-      <div class="container px-6 mx-auto md:px-10 xl:px-16">
+      <div class="container px-6 mx-auto xl:pb-32 md:px-10 lg:px-16">
         <!-- * CONTACT INFO -->
         <div class="items-start mb-20 sm:mb-16">
           <!-- * MAIN MAIN CONTAINER -->
           <div class="flex flex-col xl:mt-40 xl:flex-row">
             <!-- * CONTACT US -->
             <section class="relative text-gray-700 body-font xl:w-2/3">
-              <div class="container py-24 xl:py-0 xl:pr-56">
+              <div class="container py-10 md:py-24 xl:py-0 xl:pr-56">
                 <div
                   class="flex flex-col w-full mb-12 text-center xl:text-left xl:mb-8"
                 >
@@ -120,33 +121,39 @@
                     action="https://getform.io/f/cae003a4-6e9a-420c-957c-638943bba3fc"
                   >
                     <div class="w-1/2 p-2">
-                      <input
-                        name="name"
-                        class="w-full px-4 py-2 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-gray-600"
-                        placeholder="Ihr Name"
-                        type="text"
-                      />
+                      <label>
+                        Ihr Name
+                        <input
+                          name="name"
+                          class="w-full px-4 py-2 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-gray-600"
+                          type="text"
+                        />
+                      </label>
                     </div>
                     <div class="w-1/2 p-2">
-                      <input
-                        name="email"
-                        class="w-full px-4 py-2 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-gray-600"
-                        placeholder="Ihre E-Mail"
-                        type="email"
-                      />
+                      <label>
+                        Ihre E/Mail
+                        <input
+                          name="email"
+                          class="w-full px-4 py-2 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-gray-600"
+                          type="email"
+                        />
+                      </label>
                     </div>
                     <div class="w-full p-2">
-                      <textarea
-                        name="message"
-                        class="block w-full h-48 px-4 py-2 text-base bg-gray-100 border border-gray-400 rounded resize-none focus:outline-none focus:border-gray-600"
-                        placeholder="Ihre Nachricht"
-                      ></textarea>
+                      <label>
+                        Ihre Nachricht
+                        <textarea
+                          name="message"
+                          class="block w-full h-48 px-4 py-2 text-base bg-gray-100 border border-gray-400 rounded resize-none focus:outline-none focus:border-gray-600"
+                        ></textarea>
+                      </label>
                     </div>
                     <div class="flex w-full p-2 xl:w-1">
                       <button
                         type="submit"
                         name="submit"
-                        class="flex px-8 py-2 mx-auto text-lg text-white bg-blue-500 border-0 rounded focus:outline-none hover:bg-blue-600"
+                        class="flex px-8 py-2 mx-auto text-base font-bold text-white uppercase transition duration-150 bg-gray-800 border-0 rounded focus:outline-none hover:bg-gray-900 hover:-translate-1"
                       >
                         Absenden
                       </button>
@@ -166,11 +173,11 @@
                       "
                     >
                       <div class="flex-1 leading-tight">
-                        <p class="mb-1 text-gray-900 text-md">
+                        <p class="mb-2 text-gray-900 text-md">
                           <strong>Telefon: </strong>
                           <br class="sm:hidden" />09571 - 755 130
                         </p>
-                        <p class="text-sm text-gray-700">
+                        <p class="text-gray-900 text-md">
                           <strong>E Mail: </strong>
                           <a href="#" class="hover:underline">
                             <br class="sm:hidden" />
@@ -187,9 +194,9 @@
             <!-- * ÖFFNUNGSZEITEN -->
             <section class="md:flex md:justify-center xl:block lg:my-6 xl:my-0">
               <div class="xl:w-full xl:mt-2">
-                <h3 class="text-2xl xl:mt-0 xl:pt-0">
+                <h2 class="text-2xl xl:mt-0 xl:pt-0">
                   Öffnungszeigen
-                </h3>
+                </h2>
                 <table
                   class="w-full text-left border-collapse md:mr-48 xl:w-full"
                 >
@@ -258,31 +265,37 @@
       </div>
 
       <!-- * FOOTER -->
-      <footer class="relative bottom-0 w-full text-white xl:absolute">
+      <footer
+        class="relative bottom-auto w-full text-black xl:bottom-0 xl:absolute"
+      >
         <div
-          class="flex items-center justify-between px-4 py-2 leading-relaxed bg-gray-700"
+          class="flex items-center justify-between px-4 leading-relaxed bg-gray-400"
         >
           <div class="flex-initial font-semibold text-md">
             Autocenter Lichtenfels
           </div>
           <div>
-            <ul class="flex flex-col -mx-3 text-sm font-thin sm:flex-row">
-              <li class="mx-3">
+            <ul
+              class="flex-col inline-block -mx-3 text-sm font-thin sm:flex sm:flex-row"
+            >
+              <li class="mx-3 my-2">
                 <a href="../../../index.html" class="hover:underline"
                   >Startseite</a
                 >
               </li>
-              <li class="mx-3">
+              <li class="mx-3 my-2">
                 <a href="routenplaner.html" class="hover:underline"
                   >Routenplaner</a
                 >
               </li>
-              <li class="mx-3">
-                <a href="" class="border-b border-gray-400 hover:underline"
+              <li class="mx-3 my-2">
+                <a
+                  href=""
+                  class="border-b border-gray-700 hover:border-gray-900"
                   >Kontakt</a
                 >
               </li>
-              <li class="mx-3">
+              <li class="mx-3 my-2">
                 <a href="../../../index.html" class="hover:underline"
                   >Sitemap</a
                 >
@@ -292,7 +305,7 @@
         </div>
 
         <div
-          class="flex flex-col items-start justify-between w-full px-4 py-2 text-xs font-light bg-black sm:flex-row md:items-center"
+          class="flex flex-col items-start justify-between w-full px-4 py-3 text-xs font-light leading-relaxed bg-gray-500 sm:py-2 sm:flex-row md:items-center"
         >
           <div>
             <strong class="font-bold">Tel.: </strong>
