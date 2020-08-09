@@ -622,6 +622,10 @@ video {
   background-color: #f0f0f0;
 }
 
+.bg-opacity-95 {
+  opacity: 95%;
+}
+
 .vh-90 {
   height: 90vh;
 }
@@ -630,8 +634,9 @@ video {
   height: 60vh;
 }
 
-.bg-opacity-95 {
-  opacity: 95%;
+.shadow-lgAllround {
+  box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
