@@ -118,15 +118,15 @@
                   <form
                     class="flex flex-wrap -m-2"
                     method="POST"
-                    action="https://getform.io/f/cae003a4-6e9a-420c-957c-638943bba3fc"
+                    action="../../contactForm.php"
                   >
                     <div class="w-1/2 p-2">
                       <label>
                         Ihr Name
                         <input
                           name="name"
-                          class="w-full px-4 py-2 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-gray-600"
                           type="text"
+                          class="w-full px-4 py-2 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-gray-600"
                         />
                       </label>
                     </div>
@@ -134,9 +134,9 @@
                       <label>
                         Ihre E/Mail
                         <input
+                          type="email"
                           name="email"
                           class="w-full px-4 py-2 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-gray-600"
-                          type="email"
                         />
                       </label>
                     </div>
@@ -145,6 +145,7 @@
                         Ihre Nachricht
                         <textarea
                           name="message"
+                          type="text"
                           class="block w-full h-48 px-4 py-2 text-base bg-gray-100 border border-gray-400 rounded resize-none focus:outline-none focus:border-gray-600"
                         ></textarea>
                       </label>
